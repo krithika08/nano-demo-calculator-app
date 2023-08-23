@@ -1,6 +1,8 @@
 from flask import Flask
+from calculator_app import app as calculator_app 
 
 app = Flask(__name__)
+#app.register_blueprint(calculator_app, url_prefix='/calculator')
 
 
 @app.route("/calculator/greeting", methods=['GET'])
